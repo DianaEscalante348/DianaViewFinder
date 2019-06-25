@@ -49,7 +49,7 @@
         <!--Add New Photo-->
         <scene sceneID="fgx-ej-ohl">
             <objects>
-                <viewController id="krX-QN-bsq" sceneMemberID="viewController">
+                <viewController id="krX-QN-bsq" customClass="AddPhotoViewController" customModule="DianaViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VPL-Xd-lXQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,39 +60,41 @@
                                 <state key="normal" title="Camera">
                                     <color key="titleColor" red="0.67716670036315918" green="0.2366364598274231" blue="0.92816537618637085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="krX-QN-bsq" eventType="touchUpInside" id="T4N-HY-dBY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foM-0w-AnP">
-                                <rect key="frame" x="162" y="488" width="92" height="30"/>
+                                <rect key="frame" x="302" y="487" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Photo Library">
                                     <color key="titleColor" red="0.67716670036315918" green="0.2366364598274231" blue="0.92816537618637085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWK-Kd-ohn">
-                                <rect key="frame" x="357" y="487" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Album">
-                                    <color key="titleColor" red="0.67716670036315918" green="0.2366364598274231" blue="0.92816537618637085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="krX-QN-bsq" eventType="touchUpInside" id="uCA-9i-J3Q"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9419ec2e-4aae-4096-8ede-739e4fe8a26f_1.ef7db81c90609fd80403ccee66e1899f" translatesAutoresizingMaskIntoConstraints="NO" id="Jxw-TR-6zM">
-                                <rect key="frame" x="38" y="119" width="341" height="340"/>
+                                <rect key="frame" x="92" y="128" width="232" height="272"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lx-Sb-zDz">
-                                <rect key="frame" x="183" y="609" width="50" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKe-1L-v51">
+                                <rect key="frame" x="179" y="480" width="56" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.17377034246439849" green="0.96688828832092599" blue="0.97923413212435229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.17377034250000001" green="0.96688828829999995" blue="0.97923413209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveTapped:" destination="krX-QN-bsq" eventType="touchUpInside" id="MRj-Lj-j80"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-bC-cVu">
-                                <rect key="frame" x="162" y="545" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Caption:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSt-a4-XpA">
+                                <rect key="frame" x="159" y="433" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.17377034250000001" green="0.96688828829999995" blue="0.97923413209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
